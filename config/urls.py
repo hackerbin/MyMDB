@@ -13,12 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import os
+
 from django.contrib import admin
 from django.urls import path, include
 import core.urls
+from config.settings import BASE_DIR
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(
         core.urls, namespace='core')),
 ]
+
+handler404 = os.path.join(BASE_DIR, 'templates/404.html')

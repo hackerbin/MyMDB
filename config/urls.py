@@ -25,5 +25,3 @@ urlpatterns = [
     path('', include(
         core.urls, namespace='core')),
 ]
-
-handler404 = os.path.join(BASE_DIR, 'templates/404.html')

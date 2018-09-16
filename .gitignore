@@ -91,3 +91,6 @@ db.sqlite3
 .idea
 .code
 .vscode
+
+venv
+venv/*
